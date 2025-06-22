@@ -1,0 +1,35 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* --- BACKGROUND IMAGE STYLES --- */
+
+  /* Fallback color in case the image doesn't load */
+  background-color: #f8f9fa; 
+
+  /* Reference the image you just saved */
+  background-image: url('/src/assets/bg.png'); 
+  
+  /* This ensures the image covers the entire screen without stretching */
+  background-size: cover; 
+  
+  /* This centers the image on the screen */
+  background-position: center; 
+  
+  /* This makes the background image stay in place while the content scrolls over it, creating a professional parallax effect. */
+  background-attachment: fixed; 
+
+  color: #333;
+}
+
+/* This is the main container for our app content from App.jsx */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
