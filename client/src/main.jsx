@@ -10,12 +10,14 @@ import { theme } from './theme'; // Import our new theme
 // Vite exposes environment variables through import.meta.env
 const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* The Google Provider needs your Client ID to function */}
     <GoogleOAuthProvider clientId={googleClientId}>
       <AuthProvider>
-        <App />
+        <ThemeProvider theme={theme}> {/* Wrap App with ThemeProvider */}
+          <App />
+        </ThemeProvider>
       </AuthProvider>
     </GoogleOAuthProvider>
   </React.StrictMode>,
